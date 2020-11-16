@@ -7,6 +7,7 @@ nav:
   - 4.0 - IP Services: ip_services.md
   - 5.0 - Security Fundementals: security_fundamentals.md
   - 6.0 - Automation And Programability: automation_and_programmmability.md
+  - Cisco Devices: CiscoDevices.md
   - Homelab: homelab.md
   - Resources: resources.md
   - Misc: misc.md
