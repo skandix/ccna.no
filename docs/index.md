@@ -1,8 +1,12 @@
 # CCNA.no
-> can this trigger github actions ?
+> This is a wiki where i write down things i find nice to know when trying to practice for ccna
 
+## Learning Material
+* Pluralsigth Path
+* "Homelab" at Office
+* Study guides (will link to theese ) 
 
-## CCNA Exam v1.0 (200-301)
+## CCNA Exam v1.0 (200-301) (https://www.cisco.com/c/dam/en_us/training-events/le31/le46/cln/marketing/exam-topics/200-301-CCNA.pdf)
 
 **Exam Description**:  CCNA Exam v1.0 (CCNA 200-301) is a 120-minute exam associated with the CCNA certification. This exam tests a candidate's knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability. The course, Implementing and Administering Cisco Solutions (CCNA), helps candidates prepare for this exam.
 

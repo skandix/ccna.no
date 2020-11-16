@@ -1,19 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-
-name: ccna.no
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
+name: Publish docs via GitHub Pages
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - master
 
 jobs:
   build:
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout master
+        uses: actions/checkout@v1
 
-      - name: Deploy MkDocs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@1.16
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          #CUSTOM_DOMAIN: ccna.no # when bill is payed
