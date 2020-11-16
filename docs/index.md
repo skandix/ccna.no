@@ -1,12 +1,8 @@
 # CCNA.no
 > This is a wiki where i write down things i find nice to know when trying to practice for ccna
 
-## Learning Material
-* Pluralsigth Path
-* "Homelab" at Office
-* Study guides (will link to theese ) 
-
-## CCNA Exam v1.0 (200-301) (https://www.cisco.com/c/dam/en_us/training-events/le31/le46/cln/marketing/exam-topics/200-301-CCNA.pdf)
+## CCNA Exam v1.0 (200-301) 
+> https://www.cisco.com/c/dam/en_us/training-events/le31/le46/cln/marketing/exam-topics/200-301-CCNA.pdf
 
 **Exam Description**:  CCNA Exam v1.0 (CCNA 200-301) is a 120-minute exam associated with the CCNA certification. This exam tests a candidate's knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability. The course, Implementing and Administering Cisco Solutions (CCNA), helps candidates prepare for this exam.
 
@@ -65,7 +61,7 @@ The following topics are general guidelines for the content likely to be include
 		* 2.1.a Access ports (data and voice)
 		* 2.1.b Default VLAN
 		* 2.1.c Connectivity
-		* 2.2 Configure and verify interswitch connectivity
+	* 2.2 Configure and verify interswitch connectivity
 		* 2.2.a Trunk ports
 		* 2.2.b 80 2.1Q
 		* 2.2.c Native VLAN

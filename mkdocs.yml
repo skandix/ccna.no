@@ -1,5 +1,9 @@
 site_name: ccna.no
 nav:
+  - Home: index.md
+  - Homelab: homelab.md
+  - Resources: resources.md
+  - Misc: misc.md
   - 1.0 - Network Fundamentals: network_fundamentals.md
   - 2.0 - Network Access: network_access.md 
   - 3.0 - IP Connectivity: ip_connectivity.md
