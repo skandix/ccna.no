@@ -1,4 +1,10 @@
 # CCNA.no
+This is a wiki where i write down things i find nice to know when trying to practice for ccna
+
+## Learning Material
+* Pluralsigth Path
+* "Homelab" at Office
+* Study guides (will link to theese ) 
 
 ## CCNA Exam v1.0 (200-301)
 
