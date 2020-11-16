@@ -1,5 +1,10 @@
 site_name: ccna.no
 nav:
-  - Home: index.md
-  - About: about.md
+  - 1.0 - Network Fundamentals: network_fundamentals.md
+  - 2.0 - Network Access: network_access.md 
+  - 3.0 - IP Connectivity: ip_connectivity.md
+  - 4.0 - IP Services: ip_services.md
+  - 5.0 - Security Fundementals: security_fundamentals.md
+  - 6.0 - Automation And Programability: automation_and_programmmability.md
 theme: readthedocs
+
