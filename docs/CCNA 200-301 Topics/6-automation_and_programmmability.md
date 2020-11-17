@@ -1,4 +1,4 @@
-# Automation And Programmabiltiy
+# 6.0 - Automation And Programmabiltiy
 
 ## 6.1 Explain how automation impacts network management
 ## 6.2 Compare traditional networks with controller-based networking

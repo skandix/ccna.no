@@ -133,5 +133,6 @@ logging sync
 
 ### enable ssh for awesome remote access!
 ```
-
+ip ssh version 2 # enabling ssh version 2
+username skandix secret cisco # creating user with password
 ```

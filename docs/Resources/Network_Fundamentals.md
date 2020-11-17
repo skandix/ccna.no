@@ -1,3 +1,5 @@
+# Network Fundamentals
+
 # Network Address
 > All Binary 0's in the HOST portion of the address
 ```
@@ -52,20 +54,20 @@ Can only be assigned to a network
 
 # Subnet Calculator
 
-| bits | networks   | 	hosts 	|
-|------|------------|-----------|
-| 0    | 2^0 = 1	|  	 -		|
-| 1    | 2^1 = 2	|	 -		|
-| 2	   | 2^2 = 4	| 4-2 = 2	|
-| 3    | 2^3 = 8	| 8-2 = 6	|
-| 4    | 2^4 = 16	| 16-2 = 14	|
-| 5    | 2^5 = 32	|	30		|
-| 6    | 2^6 = 64	|	62		|
-| 7    | 2^7 = 128	|	126		|
-| 8    | 2^8 = 256	|	254		|
-| 9    | 2^9 = 512	|	510		|
-| 10   | 2^10 = 1024|	1022	|
-| n    | 2^n = 		|	n-2 = 	|
+| bits | networks | hosts 	|
+|------|----------|---------|
+| 0    | 2^0 = 1  |  -		|
+| 1    | 	2     |	 -		|
+| 2	   |    4	  | 2		|
+| 3    | 	8	  | 6		|
+| 4    | 	16	  | 14		|
+| 5    | 	32 	  |	30		|
+| 6    | 	64	  |	62		|
+| 7    | 	128	  |	126		|
+| 8    | 	256	  |	254		|
+| 9    | 	512	  |	510		|
+| 10   | 	1024  |	1022	|
+| n    |    2^n	  |	n-2		|
 
 # Protip Binary Calculations
 Read from left to rigth.
@@ -153,3 +155,45 @@ Nooo, binary to hexadecimal conversion.. !
 ## Anycast Address
 * One IPv6 address - many devices
 * Used for loadbalancing	
+
+## SLAAC
+> Stateless Address Auto-Configuration.
+
+
+## VLSM
+> Variable Length Subnet Masking
+
+```
+	*---------*
+   / \ 		 / \
+  *   *		* 	*
+ / \ / \   / \ / \
+a  b c d  e  f g  h 
+
+```
+How many networks do we need ? 
+
+* a = 25 Hosts
+* b = 100 Hosts
+* c = 75 Hosts
+* d = 200 Hosts
+* e = 150 Hosts
+* f = 300 Hosts
+* g = 125 Hosts
+* h = 200 Hosts
+
+| Hosts | Bits | Network ID (Prefix) | Mask |
+|-------|------|---------------------|------|
+| 300	|	9  |
+| 200	|	8  |
+| 200	|	8  |	
+| 150	|	8  |	
+| 125	|	7  |	
+| 100	|	7  |	
+| 75	|	7  |	
+| 25	|	5  |	
+| 2 	|	2  |		
+| 2		|	2  |	
+| 2		|	2  |	
+| 2		|	2  |	
+| 2		|	2  |		

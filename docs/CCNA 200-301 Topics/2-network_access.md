@@ -1,4 +1,5 @@
-# Network Access
+# 2.0 - Network Access
+
 ## 2.1 Configure and verify VLANs (normal range) spanning multiple switches
 * 2.1.a Access ports (data and voice)
 * 2.1.b Default VLAN
