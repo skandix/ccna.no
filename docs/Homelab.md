@@ -3,8 +3,29 @@ I 've setup these devices at my office as I have some physical equipment to work
 
 * Cisco 1811 - Router
 * Cisco 2950 - Switch
+* 4x Raspberry Pi's 3B 
+* 1x Lenovo Thinkpad T490
 
-![](https://lh3.googleusercontent.com/mcJf8KlskHVZ2hojYu5kp_UTLI9LNfaFTWNobdnL8pQ7ApiyBx9Kl6OyPEtwWY9h6pE-8ZoBs0YiYva6TAL6LIw5S7_fVgqxtzmEbP-D3zUKLIszZIhHRcdA5DEIQ49mi1oWr_IjBmTSeir7_1I_gf5UxGIX0OMeaWuemG4pX-Fha1wB9v9PSSfOT6aY6qSYorLhNxY6bio_YA6szlrha83qlDO82L4gFaHHH9TXlVuZJWCRtPz2vznANX-BLqlIJ3vQQLFzvFa5d8ZDN_u06W6i_EjOkj7Cl5IgsH8uO3sJ8KxTwyVeDFS9lSHm7RlkwT6n1A-ebm5y5ZADKqMgy0Iu6DoOzVqkexKNVIFCmpSUivo0NHZfD5zUsRQMNflsEanILPxzX-jkSyfa_GPME97fdU8-mZjKVdIMVrxDorh_aPwv1zG4wMDaIV0PwN0Dp25Iua02RXGEgN1WChZd4Z5UXs4eOBu4vyxBKXV4vXQ3zipmegJcD-wvu4dDAuuHbb0tOop-aNG8WDXtfi94kWDUMWAKaGf8IIo3kkY79jIM9FpnzwpKfLBY-yZB3lsTetkxUi_RvFaixHTGbWtRHvPMj3Ir1DqRC30o6KEer5SjKHk40oXY3KUnrxVyCLX31tf6icnVWDbGvIHWHIO6ghthmZlRpcFPIkQWnibZ8zw_YArhfUQISnVKbv8W7w=w912-h416-no?authuser=0)
-![](https://lh3.googleusercontent.com/p02-80RgK691b2IbCQ8G4GyhgxkbK4z3P4bm-IJPbnxk44ssXzOH2aevJ4gzjc0wP1g6b2NOEFmuWTWBSTKBYcbquTbkpxIx6GXLH-GPsFD8eFD4UkVc8y_MzlP2ihP32u25hMHb8rNN2HAhv9BMrnVy5LVG4BxvibHfUTX680bs1mmKrfJM9fQAPFgAkl_5LISD7BAsrimjbA7OybtAAqq0vZmRXBjDHWv83hLar6dVEH8V-dLV8Yk00Ghy2jL3yY0_NJvWp4UThw-tTzsoWjm5chS2dwET1MWnYWzwV4G2GknrHddlNqqhQLZcefYJGFUyhv9ceeDukpDyfibeyfsK3mEIsOr-a8wRd8v9BDMpExeYVQcJdVSUuYAQCxxdkgYYijef6PBLbxJGqugPfZvSlCwfJn6qK-wRPj7Izj6H3CiQ67v95jdAihHodrkaL1Cn2X-Z2w48yxSM5K_h9ydDm4mlSB148XJ5w1TO9aa0VDC68OB7TM-lp_LJ7N8F4KA4vrsHmHBDQCza5iBglSmcjD_eKVMBzWIXLvEafZAkYIRVvQQff-DAK7jwtpPInwYcAbNLolQP-QbpajwCW0UcN2PZfpcuJxNHr1nstoZSpQUzonLsa0RcLgMit_sh-8OxBwZE-9vEegKZNt9VINIlPMW3ck_F9D3U5zwYeotQmFf2kUTv2eSxWTWrfw=w912-h416-no?authuser=0)
+![](./_assets/homelab.jpg)
 
-
+## **Description**
+### **Router**
+* **FE0/1**
+	* UiA WAN
+* **FE0/0**
+	* LAN (Into Port1 on Switch)
+* **Raspi 1,2 (from left)**
+	* Port 2
+	* Port 6
+* **Console**
+* **Laptop (Red)**
+	* Port 5
+	
+### **Switch**
+* **Raspi 3,4**
+	* Port 47
+	* Port 48
+* **Console**
+* **Laptop (Purple)**
+	* Port 5
+ 
