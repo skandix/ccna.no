@@ -79,3 +79,24 @@ show start # inspect that it have been copied into the start
 
 show flash
 ```
+
+### Show mac address table
+> Referred as the CAM table (Content Addressable Memory )
+
+
+```
+en
+show mac address table
+```
+
+* dynamic Entries
+	* shows dynamic entries, since the asic on the switchports are reading the source MAC rigth out of that frame
+		* 
+```
+show mac address table dynamic
+```
+
+#### Show mad addresse on interface
+```
+show mac address table interface f0/1'
+```
