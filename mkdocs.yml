@@ -1,2 +1,9 @@
 site_name: ccna.no
 theme: material
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.superfences
+
+
