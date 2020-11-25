@@ -197,3 +197,12 @@ How many networks do we need ?
 | 2		|	2  |	
 | 2		|	2  |	
 | 2		|	2  |		
+
+
+# Ping (Packet Internet Groper)
+* ICMP
+	* Protocol ping uses, to get repons back if devices responds or not.
+	* Transmit
+		* Echo Request
+	* Receive 
+		* Echo Reply
