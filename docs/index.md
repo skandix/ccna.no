@@ -11,3 +11,6 @@
 The following topics are general guidelines for the content likely to be included on the exam. However, other related topics may also appear on any specific delivery of the exam. To better reflect the contents of the exam and for clarity purposes, the guidelines below may change at any time without notice.
 
 ![](https://memegenerator.net/img/instances/600x/73934195/networking-its-kind-of-a-big-deal.jpg)
+
+
+P.S things marked with **[IMPORTANT]** is important to remember for the CCNA exam
