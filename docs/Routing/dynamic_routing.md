@@ -9,8 +9,8 @@
 ## Metric
 > A value that represents the cost of a path to a network prefix
 
-* cost can be measured as 
-	* hop count 
+* cost can be measured as
+	* hop count
 	* bandwidth
 
 
@@ -22,7 +22,7 @@ If company A signs a deal with ISP 1 and , company B with ISP 4.
 We need a mechanize for the ISP's to route traffic between each other (Exterior Gateway Protocol)
 
 ```
-	[Company A]  
+	[Company A]
 		   |--> {ISP 1} <--> {ISP 1}
 				{ISP 3} <--> {ISP 4} <--|
 								 [Company B]
@@ -30,7 +30,7 @@ We need a mechanize for the ISP's to route traffic between each other (Exterior 
 
 ### Exterior Gateway Protocols (EGP)
 * Border Gateway Protocol (BPG)
-	* is the Protocol the internet uses to transfer routes inbetween ISP's 
+	* is the Protocol the internet uses to transfer routes inbetween ISP's
 	* Path Vector Protocol
 		* Setup a network with very specific paths.
 		* granular control how that protocol distrubutes traffic
@@ -50,11 +50,11 @@ We need a mechanize for the ISP's to route traffic between each other (Exterior 
 
 #### Distance Vector and link State
 
-| Distance Vector Protocols | Link State Protocols | 
-|---------------------------|----------------------|
-| Routing Information Protocol (RIP) |  Open Shorts Path First (OSPF) | 
-| Interior Gateway Routing Protocol (IGRP) | Intermediate System - Intermediate System (IS-IS) | 
-| Enhanced Interior Gateway Routing Protocol (EIGRP) |  |
+| Distance Vector Protocols                          | Link State Protocols                              |
+| -------------------------------------------------- | ------------------------------------------------- |
+| Routing Information Protocol (RIP)                 | Open Shorts Path First (OSPF)                     |
+| Interior Gateway Routing Protocol (IGRP)           | Intermediate System - Intermediate System (IS-IS) |
+| Enhanced Interior Gateway Routing Protocol (EIGRP) |                                                   |
 
 * **RIP**
 	* V1
@@ -76,31 +76,31 @@ We need a mechanize for the ISP's to route traffic between each other (Exterior 
 ### Administrative Distance (AD) **[IMPORTANT]**
 > For the router to choose which route to the dest network gets added to the table for the protocol
 
-| Protocol | AD |
-|----------|----|
-| Directly Connected | 0 | 
-| Static Route | 1 | 
-| EIGRP | 90 | 
-| OSPF | 110 | 
-| IS-IS | 115 | 
-| RIP | 120 | 
+| Protocol           | AD  |
+| ------------------ | --- |
+| Directly Connected | 0   |
+| Static Route       | 1   |
+| EIGRP              | 90  |
+| OSPF               | 110 |
+| IS-IS              | 115 |
+| RIP                | 120 |
 
 ### Metric
-> 
+>
 
-| Protocol | Metric |
-|----------|--------|
-| Directyl connected | -- |
-| Static Route | -- |
-| EIGRP | Bandwidth + Delay | 
-| OSPF | Bandwidth | 
-| IS-IS | Varies (Custom) | 
-| RIP | Hop Count  | 
+| Protocol           | Metric            |
+| ------------------ | ----------------- |
+| Directyl connected | --                |
+| Static Route       | --                |
+| EIGRP              | Bandwidth + Delay |
+| OSPF               | Bandwidth         |
+| IS-IS              | Varies (Custom)   |
+| RIP                | Hop Count         |
 
 ### Configuring RIP on router
 ```
-en 
-conf t 
+en
+conf t
 router rip
 ver 2 # as ver1 does not support cidr.
 no auto-summary # utillity in rip, to sumarize a large grp of hosts to a route into one statement

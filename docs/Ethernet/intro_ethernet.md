@@ -27,7 +27,7 @@
 
 * Bus Network
 	* One device sends data(+5 Volt)
-	* And only one device can send data at the time, if multiple send data. 
+	* And only one device can send data at the time, if multiple send data.
 
 * Collision (10V Spike occured)
 	* A devices stop sending traffic, and wait a random period of time before they retry to send the data again.
@@ -49,13 +49,13 @@
 
 ### Speed
 
-| Name  			| Speed  |
-|-------------------|--------|
-| Ethernet  		| 10Mbps | 
-| Ethernet 			| 100Mbps| 
-| GigabitEthernet  	| 1Gbps  | 
-| 10GigabitEthernet	| 10Gbps | 
-| 10GigabitEthernet | 40Gbps | 
+| Name              | Speed   |
+| ----------------- | ------- |
+| Ethernet          | 10Mbps  |
+| Ethernet          | 100Mbps |
+| GigabitEthernet   | 1Gbps   |
+| 10GigabitEthernet | 10Gbps  |
+| 10GigabitEthernet | 40Gbps  |
 
 
 
@@ -80,12 +80,12 @@
 | MAC Address | Address    | Protocol | 	     |
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
-* Frame 
+* Frame
 	* A chunk of data, with a data link layer header
 
 * Ethernet II Frame
 	* Dest MAC Address (48 bits)
-	* Src MAC Address (48 bits) 
+	* Src MAC Address (48 bits)
 	* Type (16 bits)
 		* Identify type of message in the frame.
 		* IPv4
@@ -115,13 +115,13 @@
 # Ethernet Swithcing
 
 ## Network Topologies
-* Bus 
+* Bus
 	* 10Base2, 10Base5.
-	* DOCSIS 
+	* DOCSIS
 	* Never kick the cable.
-* Ring 
+* Ring
 	* IBM Token Ring
-		* Cost 
+		* Cost
 		* Speed
 * Star
 	*  Ethernet Hub
@@ -142,10 +142,10 @@
 **MAX Address Table Example **
 
 | Port | MAC |
-|------|-----|
-|  1   | 6E  |
-|  2   | B3  |
-|  3   | 3F  |
-|  4   | DF  |
-|  5   | C2  |
-|  6   | A7  |
+| ---- | --- |
+| 1    | 6E  |
+| 2    | B3  |
+| 3    | 3F  |
+| 4    | DF  |
+| 5    | C2  |
+| 6    | A7  |

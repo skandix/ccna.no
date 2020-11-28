@@ -12,7 +12,7 @@
 	* SSH (Remote)
 		* Keys
 		* Start ssh
-		* 
+		*
 * Users
 * Copy Config
 
@@ -49,7 +49,7 @@ ip domain-name alyssa_switch.localdomain
 banner motd #This is Skandix's Switch Stay out#
 
 enable secret cisco
-line con 0 
+line con 0
 logging sync
 password cisco
 login
@@ -57,7 +57,7 @@ exit
 
 username skandix secret cisco
 crypto key generate rsa
-ip ssh version 2 
+ip ssh version 2
 
 service password-encryption
 
@@ -91,7 +91,7 @@ show mac address table
 
 * dynamic Entries
 	* shows dynamic entries, since the asic on the switchports are reading the source MAC rigth out of that frame
-		* 
+		*
 ```
 show mac address table dynamic
 ```

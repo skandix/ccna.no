@@ -60,7 +60,7 @@ copy run start
 show ip interface brief
 # set interfaces as no shutdown if needed
 copy start run
-exit 
-reload 
+exit
+reload
 ```
 
