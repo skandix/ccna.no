@@ -3,7 +3,7 @@ I 've setup these devices at my office as I have some physical equipment to work
 
 * Cisco 1811 - Router
 * Cisco 2950 - Switch
-* 4x Raspberry Pi's 3B 
+* 4x Raspberry Pi's 3B
 * 1x Lenovo Thinkpad T490
 
 ![](./_assets/homelab.jpg)
@@ -20,7 +20,7 @@ I 've setup these devices at my office as I have some physical equipment to work
 * **Console**
 * **Laptop (Red)**
 	* Port 5
-	
+
 ### **Switch**
 * **Raspi 3,4**
 	* Port 47
@@ -28,4 +28,4 @@ I 've setup these devices at my office as I have some physical equipment to work
 * **Console**
 * **Laptop (Purple)**
 	* Port 5
- 
+

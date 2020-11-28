@@ -18,7 +18,7 @@
 2. Load Bootstrap
 3. Load IOS (Internetworking Operating System)
 4. Load Configuration (startup-config, if it exists)
- 
+
 ## Router Memory
 1. EEPROM - Bootstrap
 2. Flash - IOS
@@ -44,7 +44,7 @@ It will save it's running-config into startup-config so that if it looses power 
 ### Example
 * c1841-adventerprisek9-mz.124-24.T5.bin
 	* ``c1841-`` = Cisco 1800 Series router model 1841
-		* ``adventerprisek9-mz`` = Advanced Enterprise Feature Set 
+		* ``adventerprisek9-mz`` = Advanced Enterprise Feature Set
 			* ``124`` = Train
 				* ``24`` = Throttle
 					* ``T5`` = Rebuild
@@ -53,7 +53,7 @@ It will save it's running-config into startup-config so that if it looses power 
 
 * c1900-universalk9-mz.SPA.153-3.M4.bin
 	* ``c1900-`` = All 1900 Series Routers
-		* ``universalk9-mz.SPA.`` = Universal Feature Set 
+		* ``universalk9-mz.SPA.`` = Universal Feature Set
 			* ``153`` = Train
 				* ``3`` = Throttle
 					* ``M4`` = Rebuild
@@ -63,7 +63,7 @@ It will save it's running-config into startup-config so that if it looses power 
 ## Router configuration
 I'm Using a Cisco Router 1942, and minicom to communicate with the device over serial.
 Make sure you've set the correct baudrate, if not you are going to have a bad time.
- 
+
 
 so first i have to remove any username or password that migth be set!
 When it's booting, press ``CTRL + A F`` to break the boot.
@@ -130,7 +130,7 @@ service password-encryption
 ### make serial console stop interrupting me :(
 ```bash
 line con 0 # console port
-logging sync 
+logging sync
 
 line aux 0 # aux port
 logging sync
@@ -173,19 +173,19 @@ eth0 0/1 - 10.0.0.129/25
 show interface # to see if i got FE or GE avaliable
 interface gigabitethernet 0/0
 ip address 10.0.0.1 255.255.255.128
-shutdown # turn off 
+shutdown # turn off
 no shutdown # no in front of a command means to the oposite.
 exit
 
 interface gigabitethernet 0/1
 ip address 10.0.0.129 255.255.255.128
-no shutdown 
+no shutdown
 exit
-exit 
+exit
 ```
 
 ### saving config so we don't loose everything
-```bash 
+```bash
 copy running-config startup-config
 ```
 
@@ -212,7 +212,7 @@ banner motd c Authhorized Use Only! c
 line con 0
 password cisco
 login
-live aux 0 
+live aux 0
 password cisco
 login
 en sec cisco
@@ -220,8 +220,8 @@ serv password-encryption
 ip domain-name alyssa_router
 username skandix (secret|pasword) cisco # it differs from my hw and the lecturer one
 crypto key generate rsa general-keys
-ip ssh version 2 # enable ssh 
-line vty 0 4 
+ip ssh version 2 # enable ssh
+line vty 0 4
 login local
 transport input ssh
 interface (f|g|e)0/0 # varies on what interface you have, use show interfaces to see interfaces you have.
@@ -230,10 +230,10 @@ no shut
 interface (f|g|e)0/1
 ip addr 10.0.0.130 255.255.255.128
 no shut
-exit 
-line con 0 
+exit
+line con 0
 logging sync
-line aux 0 
+line aux 0
 logging sync
 exit
 exit
@@ -249,7 +249,7 @@ logging monitor
 ### configuring ipv6
 ```bash
 ipv6 unicast-routing # enable unicast-routing
-interface (f|g|e)0/0 
+interface (f|g|e)0/0
 ipv6 address 2001:db8:4:a::1/64
 interface (f|g|e)0/1
 ipv6 address 2001:db8:4:b::1/64

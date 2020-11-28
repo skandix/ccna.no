@@ -1,8 +1,8 @@
 # 5.0 - Security Fundamentals
 
 ## 5.1 Define key security concepts (threats, vulnerabilities, exploits,  and mitigation techniques)
-## 5.2 Describe security program elements (user awareness, training, and physical access control) 
-## 5.3 Configure device access control using local passwords 
+## 5.2 Describe security program elements (user awareness, training, and physical access control)
+## 5.3 Configure device access control using local passwords
 ## 5.4 Describe security password policies elements, such as management, complexity, and alternatives (multifactor authentication, certificates, and biometrics)
 ## 5.5 Describe remote access and site-to-site VPNs
 ## 5.6 Configure and verify access control lists

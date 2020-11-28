@@ -50,7 +50,7 @@ Can only be assigned to a network
 11111111 11111111 11111111 00000000
 \		24 bits 		 /
 
-**/24 = Length of network Prefix** 
+**/24 = Length of network Prefix**
 
 # Subnet Calculator
 
@@ -74,19 +74,19 @@ Read from left to rigth.
 * Highest number to the far left
 * Lowest numer to the far rigth.
 
-## Example 
+## Example
 ```
-128 64 32 16 8 4 2 1 
+128 64 32 16 8 4 2 1
 
 11001011 00000000 01110001 00000000
 \ 	   /
-   
+
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1   | 1   | 0   | 0   | 1   | 0   | 1   | 1   |
 
-128 + 64 + 8 + 2 + 1  = 203 
+128 + 64 + 8 + 2 + 1  = 203
 
 
 ```
@@ -114,14 +114,14 @@ Nooo, binary to hexadecimal conversion.. !
 
 # IPV6
 
-## IPv6 Structure 
+## IPv6 Structure
 ```2001:0DB8:0002:008D:0000:0000:00A5:52F5```
 
 ### Eliminate Leding 0's
 ```2001:DB8:2:8D:0:0:A5:52F5```
 
 ### Eliminate 0's with :: (Double Colon)
-* Correct 
+* Correct
 	```2001:DB8:2:8D::A5:52F5```
 * Wrong
 	```2001:DB8:8D::A5::52F5```
@@ -154,7 +154,7 @@ Nooo, binary to hexadecimal conversion.. !
 
 ## Anycast Address
 * One IPv6 address - many devices
-* Used for loadbalancing	
+* Used for loadbalancing
 
 ## SLAAC
 > Stateless Address Auto-Configuration.
@@ -168,10 +168,10 @@ Nooo, binary to hexadecimal conversion.. !
    / \ 		 / \
   *   *		* 	*
  / \ / \   / \ / \
-a  b c d  e  f g  h 
+a  b c d  e  f g  h
 
 ```
-How many networks do we need ? 
+How many networks do we need ?
 
 * a = 25 Hosts
 * b = 100 Hosts
@@ -204,5 +204,5 @@ How many networks do we need ?
 	* Protocol ping uses, to get repons back if devices responds or not.
 	* Transmit
 		* Echo Request
-	* Receive 
+	* Receive
 		* Echo Reply

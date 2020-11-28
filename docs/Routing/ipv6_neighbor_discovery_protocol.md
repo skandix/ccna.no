@@ -1,6 +1,6 @@
 # IPV6 Neighbor Discovery Protocol
 > In ipv6 we don't have ARP but we do have Neighbor Discovery Protocol.
- 
+
 
 * Neighbor Table
 
@@ -37,7 +37,7 @@
 ```
 Dev1 - 2001:DB8:A::y/64
 Dev2 - 2001:DB8:A::x/64
-Router - 2001:DB8:A::1/64 
+Router - 2001:DB8:A::1/64
 
 Dev1,2 --- [Switch] ---(F0/0) Router
 ```
@@ -46,7 +46,7 @@ Dev1,2 --- [Switch] ---(F0/0) Router
 ```bash
 en
 shopw ip int bri
-conf t 
+conf t
 
 int f0/0 # interface f0/0
 ipv6 address 2001:DB8:a::1/64  # ipv6 on int f0/0

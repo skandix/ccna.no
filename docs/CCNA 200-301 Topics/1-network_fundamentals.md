@@ -23,14 +23,14 @@
 * 1.3.c Concepts of PoE
 
 ## 1.4 Identify interface and cable issues (collisions, errors, mismatch duplex, and/or speed)
-## 1.5 Compare TCP to UDP 
-## 1.6 Configure and verify IPv4 addressing and subnetting 
+## 1.5 Compare TCP to UDP
+## 1.6 Configure and verify IPv4 addressing and subnetting
 ## 1.7 Describe the need for private IPv4 addressing
 ## 1.8 Configure and verify IPv6 addressing and prefix
-## 1.9 Compare IPv6 address types 
+## 1.9 Compare IPv6 address types
 * 1.9.a Global unicast
-* 1.9.b Unique local 
-* 1.9.c Link local 
+* 1.9.b Unique local
+* 1.9.c Link local
 * 1.9.d Anycast
 * 1.9.e Multicast
 * 1.9.f Modified EUI 64

@@ -9,7 +9,7 @@
 * 2.2.a Trunk ports
 * 2.2.b 80 2.1Q
 * 2.2.c Native VLAN
-	
+
 ## 2.3 Configure and verify Layer 2 discovery protocols (Cisco Discovery Protocol and LLDP)
 ## 2.4 Configure and verify (Layer 2/Layer 3) EtherChannel (LACP)
 ## 2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol and identify basic operations
@@ -19,5 +19,5 @@
 
 ## 2.6 Compare Cisco Wireless Architectures and AP modes
 ## 2.7 Describe physical infrastructure connections of WLAN components (AP, WLC, access/trunk ports, and LAG)
-## 2.8 Describe AP and WLC management access connections (Telnet, SSH, HTTP, HTTPS, console, and TACACS+/RADIUS) 
+## 2.8 Describe AP and WLC management access connections (Telnet, SSH, HTTP, HTTPS, console, and TACACS+/RADIUS)
 ## 2.9 Configure the components of a wireless LAN access for client connectivity using GUI onlysuch as WLAN creation, security settings, QoS profiles, and advanced WLAN settings

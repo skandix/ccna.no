@@ -113,3 +113,81 @@ exit
 show ip protocols # show configured routing protocols
 
 ```
+
+## Open Shortest Path First (OSPF)
+- OSPF
+  - uses hello protocol to discover its neighbor.
+    - Send out periodic hello messages
+    - Hello Protocol Shares
+      - Subnet/mask
+      - Hello Interval
+      - Dead Interval
+      - Area ID (By default there must be exists an Area 0!)
+      - Authentication(opt)
+      - Stub Area Flag
+      - MTU size
+    - To build a neighbor relationship both neighbor needs to be in the same area
+
+### Hello Example
+|                     |                   |
+| ------------------- | ----------------- |
+| Subnet/ Mask        | 172.16.0.0/30     |
+| Hello Interval      | 10 sec / 30 sec   |
+| Dead Interval       | 4x Hello Interval |
+| Area ID             | 0                 |
+| Authetication (opt) | --                |
+| Stub Area Flag      | none              |
+| MTU Size            | Varies            |
+
+
+### Router ID
+> an Unique identification to identify routers in ospf
+- it choose on boot or if rebooted
+- What can be used as the Router ID?
+	1. Configured Value
+	2. Highest IP on loopback interface
+	3. Highest IP on ANY active interface
+- Router ID is written in the format as an ipv4 address BUT ITS not an ipv4 addr.
+
+### Neighbor Table
+> This is needed to build a relationshops
+
+|                  |              |
+| ---------------- | ------------ |
+| Neighbor ID      | 192.168.10.1 |
+| State            | Init         |
+| Dead Time        | 40sec        |
+| Next Hop Address | 172.16.0.2   |
+| Exit Interface   | F0/1         |
+
+### Link Information
+- Link State Advertisement (LSA)
+- Link State Update (LSU)
+- Link State Database (LSDb)
+  - Router ID
+  - Link ID
+  - Link Mask
+  - LSA Type
+
+### Calculate Routing Table
+- Takes each routers LSDb
+  - Uses SPF Algorihm (Djikstra Alorithm)
+
+### OSPF Terminology
+#### Messages Types
+- Hello
+- Database Descriptor
+- Link State Request **(LSA)**
+  - If a Routes is missing some data it will send out a request to other routers about it's missing data, and then they will report back with a **LSU**
+- Link State Update **(LSU)**
+  - Contains Link State Advertisement **(LSA)**
+- Link State Acknowledgement **(LSAck)**
+  - Acking that we recived data from OSPF
+
+- LSA Types
+  - Type 1 - **Router LSA**
+    - Describes links and costs
+  - Type 2 - **Network LSA**
+    - Describes routers in a Broadcast Network
+  - Type 3 - **Summary LSA**
+  - 
