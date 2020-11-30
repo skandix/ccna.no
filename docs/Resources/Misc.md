@@ -1,1 +1,21 @@
-# Glossary
+- [X] Introduction to Networking for Cisco CCNA
+- [X] Network Layer Addressing and Subnetting
+- [X] Configuring a Cisco Router
+- [X] Ethernet Operation and Switch Configuration
+- [X] Routing IPv4 and IPv6
+- [X] Introduction to Dynamic Routing
+- [X] VLAN Operation and Configuration
+- [ ] Securing the Switch
+- [ ] TCP and UDP Operation
+- [ ] Implementing Application Layer Protocols for Cisco Networks
+- [ ] Building, Configuring, and Troubleshooting ACLs
+- [ ] Network Address Translation Operation and Configuration
+- [ ] Wide Area Networking and VPN Operation
+- [ ] STP and EtherChannel Operation and Configuration
+- [X] Basic Security Concepts for Cisco Networks
+- [ ] Cisco Wireless Basic Operation and Configuration
+- [ ] Network Services for Cisco CCNA
+- [ ] Cisco Topologies and Troubleshooting for CCNA Studies
+- [ ] Introduction to Cisco Automation and Software Defined Networks
+- [ ] Building Hardware Labs for CCNA Study
+- [ ] Building Packet Tracer Labs for CCNA Study: Fundamentals
