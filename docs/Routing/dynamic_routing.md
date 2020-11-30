@@ -190,4 +190,53 @@ show ip protocols # show configured routing protocols
   - Type 2 - **Network LSA**
     - Describes routers in a Broadcast Network
   - Type 3 - **Summary LSA**
-  - 
+
+### OSPF Neighbors
+- Downside
+  - is that you have multiple routers with osfp, it will flood itself with neighbo requests..
+- Designated Router (DR)
+  - Main router!
+- Backup Designated Router (BDR)
+  - It's the backup of the DR
+- DR-Other
+  - is not a backup
+  - is not a DR
+  - it's the....other one.
+
+## EIGRP
+> Enhanced Interior Gateway Routing Protocol
+- Distance Vector Protocol
+  - Exchanges routing tables info
+    - in order to populate a topology table
+- Fast Convergence
+  - 3 tables
+    - Neighbor Table
+    - Topology Table
+    - Routing Table
+      - Diffusion Update Algorithm (DUAL) (Same as SPF in OSPF aka Djikstra)
+        - Successor route
+          - Best Cost
+          - Added to routing table
+        - Feasible successor
+          - Second best cost
+          - Immediately added upon loss of successor route.
+- Composite Metric
+  - Configured Values
+    - Bandwidth
+    - Delay
+  - Calculated Values
+    - Load
+    - Reliability
+
+### Operation
+
+```bash
+	{...} --- [Router A] ------ [Router B] --- {...}
+```
+- Hello Message
+  - Send message From A to B and vice versa
+  - It will then build the Routing table
+    - Update Messages
+      - Use RTP, with update messages, to populate the topology table, and use DUAL to calculate it
+        - Acknowledgement
+          - ....mye !
