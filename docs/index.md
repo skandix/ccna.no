@@ -14,3 +14,5 @@ The following topics are general guidelines for the content likely to be include
 
 
 P.S things marked with **[IMPORTANT]** is important to remember for the CCNA exam
+
+<a rel="me" href="https://chaos.social/@skandix">Mastodon</a>
