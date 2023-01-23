@@ -1,0 +1,1683 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../boot/">
+      
+      
+        <link rel="next" href="../configuring_switch/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Configuring Router - ccna.no</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuring-router" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccna.no" class="md-header__button md-logo" aria-label="ccna.no" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ccna.no
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuring Router
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccna.no" class="md-nav__button md-logo" aria-label="ccna.no" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ccna.no
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CCNA.no
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Homelab/" class="md-nav__link">
+        Homelab
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/" class="md-nav__link">
+        Basic Security Concepts for Cisco Networks
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          CCNA 200 301 Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CCNA 200 301 Topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CCNA 200 301 Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/1-network_fundamentals/" class="md-nav__link">
+        1.0 - Network Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/2-network_access/" class="md-nav__link">
+        2.0 - Network Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/3-ip_connectivity/" class="md-nav__link">
+        3.0 - IP Connectivity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/4-ip_services/" class="md-nav__link">
+        4.0 - IP Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/5-security_fundamentals/" class="md-nav__link">
+        5.0 - Security Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/6-automation_and_programmmability/" class="md-nav__link">
+        6.0 - Automation And Programmabiltiy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Devices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Devices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Devices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot/" class="md-nav__link">
+        Boot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuring Router
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuring Router
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    Ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-boot-process" class="md-nav__link">
+    Router Boot Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-memory" class="md-nav__link">
+    Router Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetworking-operating-system" class="md-nav__link">
+    Internetworking Operating System
+  </a>
+  
+    <nav class="md-nav" aria-label="Internetworking Operating System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-configuration" class="md-nav__link">
+    Router configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Router configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-started-config-your-router" class="md-nav__link">
+    how to get started config your router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-hostname" class="md-nav__link">
+    set hostname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-domainname" class="md-nav__link">
+    set domainname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-console-port" class="md-nav__link">
+    configure a password to access console port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-aux-port" class="md-nav__link">
+    configure a password to access aux port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-privlige-mode" class="md-nav__link">
+    configure a password to access privlige mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-show-the-running-config-make-sure-you-are-not-in-config-mode" class="md-nav__link">
+    to show the running config, make sure you are not in config mode.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-clear-text-passwords" class="md-nav__link">
+    disable clear text passwords!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-serial-console-stop-interrupting-me" class="md-nav__link">
+    make serial console stop interrupting me :(
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-ssh-key" class="md-nav__link">
+    generate ssh key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-ssh-for-awesome-remote-access" class="md-nav__link">
+    enable ssh for awesome remote access!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tell-the-router-to-accept-ssh-connection" class="md-nav__link">
+    tell the router to accept ssh connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-interfaces" class="md-nav__link">
+    configuring interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-config-so-we-dont-loose-everything" class="md-nav__link">
+    saving config so we don't loose everything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-the-config" class="md-nav__link">
+    remove the config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-over-just-shorter" class="md-nav__link">
+    everything over just shorter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-logging-messages-in-ssh" class="md-nav__link">
+    show logging messages in ssh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-ipv6" class="md-nav__link">
+    configuring ipv6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-interfaces" class="md-nav__link">
+    show interfaces!!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuring_switch/" class="md-nav__link">
+        Configuring Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ios/" class="md-nav__link">
+        Interconnecting Operating System
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Ethernet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ethernet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ethernet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/data_link_layer_tech/" class="md-nav__link">
+        Data Link Layer Technologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/intro_ethernet/" class="md-nav__link">
+        Intro Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/physical_layer_tech/" class="md-nav__link">
+        Physical Layer Technologies
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Misc/" class="md-nav__link">
+        Misc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Network_Fundamentals/" class="md-nav__link">
+        Network Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Useful_Resources/" class="md-nav__link">
+        Useful Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Routing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Routing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Routing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/address_resolution_protocol/" class="md-nav__link">
+        ARP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/dynamic_routing/" class="md-nav__link">
+        Dynamic Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/gateway/" class="md-nav__link">
+        Default Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/ipv6_neighbor_discovery_protocol/" class="md-nav__link">
+        IPV6 Neighbor Discovery Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/rouge_dhcp_server/" class="md-nav__link">
+        Rouge dhcp server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Routing/static_routing/" class="md-nav__link">
+        Static Routing IPv4
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Securing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Securing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Securing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Securing/securing_swithces/" class="md-nav__link">
+        Securing the Switch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          VLAN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VLAN" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          VLAN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/intervlan_routing/" class="md-nav__link">
+        InterVLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/layer3_switch/" class="md-nav__link">
+        Layer 3 Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/vlan/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/vlan_trunk/" class="md-nav__link">
+        VLAN Trunk
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    Ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-boot-process" class="md-nav__link">
+    Router Boot Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-memory" class="md-nav__link">
+    Router Memory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetworking-operating-system" class="md-nav__link">
+    Internetworking Operating System
+  </a>
+  
+    <nav class="md-nav" aria-label="Internetworking Operating System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-configuration" class="md-nav__link">
+    Router configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Router configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-started-config-your-router" class="md-nav__link">
+    how to get started config your router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-hostname" class="md-nav__link">
+    set hostname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-domainname" class="md-nav__link">
+    set domainname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-console-port" class="md-nav__link">
+    configure a password to access console port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-aux-port" class="md-nav__link">
+    configure a password to access aux port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-password-to-access-privlige-mode" class="md-nav__link">
+    configure a password to access privlige mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-show-the-running-config-make-sure-you-are-not-in-config-mode" class="md-nav__link">
+    to show the running config, make sure you are not in config mode.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-clear-text-passwords" class="md-nav__link">
+    disable clear text passwords!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-serial-console-stop-interrupting-me" class="md-nav__link">
+    make serial console stop interrupting me :(
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-ssh-key" class="md-nav__link">
+    generate ssh key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-ssh-for-awesome-remote-access" class="md-nav__link">
+    enable ssh for awesome remote access!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tell-the-router-to-accept-ssh-connection" class="md-nav__link">
+    tell the router to accept ssh connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-interfaces" class="md-nav__link">
+    configuring interfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-config-so-we-dont-loose-everything" class="md-nav__link">
+    saving config so we don't loose everything
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-the-config" class="md-nav__link">
+    remove the config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-over-just-shorter" class="md-nav__link">
+    everything over just shorter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-logging-messages-in-ssh" class="md-nav__link">
+    show logging messages in ssh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-ipv6" class="md-nav__link">
+    configuring ipv6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-interfaces" class="md-nav__link">
+    show interfaces!!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configuring-router">Configuring Router</h1>
+<h2 id="ports">Ports</h2>
+<ul>
+<li>Data Communication Ports<ul>
+<li>Serial Port<ul>
+<li>T1 Connection</li>
+</ul>
+</li>
+<li>Fast Ethernet Ports<ul>
+<li>100mbps</li>
+</ul>
+</li>
+<li>Configuration Ports<ul>
+<li>Console Port</li>
+<li>Aux Port<ul>
+<li>Both ports use serial communication</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>USB Port<ul>
+<li>To transfer and install Operating System.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="router-boot-process">Router Boot Process</h2>
+<ol>
+<li>Power on Self Test</li>
+<li>Load Bootstrap</li>
+<li>Load IOS (Internetworking Operating System)</li>
+<li>Load Configuration (startup-config, if it exists)</li>
+</ol>
+<h2 id="router-memory">Router Memory</h2>
+<ol>
+<li>EEPROM - Bootstrap</li>
+<li>Flash - IOS</li>
+<li>NVRAM - startup-config</li>
+<li>RAM - running-config</li>
+</ol>
+<p>It will save it's running-config into startup-config so that if it looses power it will not loose its power.</p>
+<h2 id="internetworking-operating-system">Internetworking Operating System</h2>
+<ul>
+<li>Platform<ul>
+<li>Router</li>
+<li>Layer 3 Switch</li>
+<li>Switch</li>
+</ul>
+</li>
+<li>Trains ()<ul>
+<li>Major Release</li>
+<li>12.2 - 12.4 - 15.0 - 15.1</li>
+</ul>
+</li>
+<li>Throttles<ul>
+<li>Minor Relases</li>
+<li>12.2(10) - 12.4(20) - 15.0(1) - 15.1(3)</li>
+</ul>
+</li>
+<li>Rebuilds<ul>
+<li>12.2(10b) - 12.4(20)T3 - 15.0(1)M8 - 15.1(3)T2</li>
+</ul>
+</li>
+</ul>
+<h3 id="example">Example</h3>
+<ul>
+<li>
+<p>c1841-adventerprisek9-mz.124-24.T5.bin</p>
+<ul>
+<li><code>c1841-</code> = Cisco 1800 Series router model 1841<ul>
+<li><code>adventerprisek9-mz</code> = Advanced Enterprise Feature Set<ul>
+<li><code>124</code> = Train<ul>
+<li><code>24</code> = Throttle<ul>
+<li><code>T5</code> = Rebuild<ul>
+<li><code>.bin</code> = Binary File System</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>c1900-universalk9-mz.SPA.153-3.M4.bin</p>
+<ul>
+<li><code>c1900-</code> = All 1900 Series Routers<ul>
+<li><code>universalk9-mz.SPA.</code> = Universal Feature Set<ul>
+<li><code>153</code> = Train<ul>
+<li><code>3</code> = Throttle<ul>
+<li><code>M4</code> = Rebuild<ul>
+<li><code>.bin</code> = Binary File System</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="router-configuration">Router configuration</h2>
+<p>I'm Using a Cisco Router 1942, and minicom to communicate with the device over serial.
+Make sure you've set the correct baudrate, if not you are going to have a bad time.</p>
+<p>so first i have to remove any username or password that migth be set!
+When it's booting, press <code>CTRL + A F</code> to break the boot.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>confreg<span class="w"> </span>0x2142
+reset
+</code></pre></div></td></tr></table></div></p>
+<p>initial configuration dialog = no!
+its supposed to be slow as shit !</p>
+<p>if promted with <code>&gt;</code> Then you are in user mode.</p>
+<h3 id="how-to-get-started-config-your-router">how to get started config your router</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">enable</span><span class="w">  </span><span class="c1"># get into privliged mode</span>
+conf<span class="w"> </span>term<span class="w"> </span><span class="c1"># get into config mode</span>
+</code></pre></div></td></tr></table></div>
+Now you should be in config mode!</p>
+<h3 id="set-hostname">set hostname</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hostname<span class="w"> </span>a4026_lab
+</code></pre></div></td></tr></table></div>
+<h3 id="set-domainname">set domainname</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ip<span class="w"> </span>domain<span class="w"> </span>name<span class="w"> </span>a4026_lab
+</code></pre></div></td></tr></table></div>
+<h3 id="configure-a-password-to-access-console-port">configure a password to access console port</h3>
+<blockquote>
+<p>To secure access to the device, to console and aux ports. Also known as lines.</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>line<span class="w"> </span>console<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># configuring the console port</span>
+password<span class="w"> </span>cisco<span class="w"> </span><span class="c1"># I want the password to be cisco</span>
+login<span class="w">  </span><span class="c1"># I want to login before i can access the console to the router.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="configure-a-password-to-access-aux-port">configure a password to access aux port</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>line<span class="w"> </span>aux<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># configuring the aux port</span>
+password<span class="w"> </span>cisco<span class="w"> </span><span class="c1"># I want the password to be cisco</span>
+login<span class="w">  </span><span class="c1"># I want to login before i can access the aux port to the router.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="configure-a-password-to-access-privlige-mode">configure a password to access privlige mode</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">enable</span><span class="w"> </span>secret<span class="w"> </span>cisco
+</code></pre></div></td></tr></table></div>
+<h3 id="to-show-the-running-config-make-sure-you-are-not-in-config-mode">to show the running config, make sure you are not in config mode.</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>show<span class="w"> </span>run<span class="w">  </span><span class="c1"># shows running config</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="disable-clear-text-passwords">disable clear text passwords!</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>service<span class="w"> </span>password-encryption
+</code></pre></div></td></tr></table></div>
+<h3 id="make-serial-console-stop-interrupting-me">make serial console stop interrupting me :(</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>line<span class="w"> </span>con<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1"># console port</span>
+logging<span class="w"> </span>sync
+
+line<span class="w"> </span>aux<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1"># aux port</span>
+logging<span class="w"> </span>sync
+</code></pre></div></td></tr></table></div>
+<h3 id="generate-ssh-key">generate ssh key</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>crypto<span class="w"> </span>key<span class="w"> </span>generate<span class="w"> </span>rsa<span class="w"> </span>general-keys
+</code></pre></div></td></tr></table></div>
+<h3 id="enable-ssh-for-awesome-remote-access">enable ssh for awesome remote access!</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ip<span class="w"> </span>ssh<span class="w"> </span>version<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="c1"># enabling ssh version 2</span>
+username<span class="w"> </span>skandix<span class="w"> </span>secret<span class="w"> </span>cisco<span class="w"> </span><span class="c1"># creating user with password</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="tell-the-router-to-accept-ssh-connection">tell the router to accept ssh connection</h3>
+<ul>
+<li>line vty<ul>
+<li>vty - virtual connection to the router</li>
+<li>there are a max of 808 virtual connections to a router</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># line vty &lt;start_line&gt; &lt;stop_line&gt;</span>
+line<span class="w"> </span>vty<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="c1"># configuring 5 vty lines at the same time</span>
+transport<span class="w"> </span>input<span class="w"> </span>ssh<span class="w"> </span><span class="c1"># only allow ssh connection to the device</span>
+login<span class="w"> </span><span class="nb">local</span><span class="w"> </span><span class="c1"># tell router to auth with localusers</span>
+logging<span class="w"> </span>sync
+<span class="nb">exit</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="configuring-interfaces">configuring interfaces</h3>
+<p>GE - GigabitEthernet(1000mbps)
+FE - FastEthernet(100mbps)</p>
+<p>eth 0/0 - 10.0.0.1/25
+eth0 0/1 - 10.0.0.129/25</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>show<span class="w"> </span>interface<span class="w"> </span><span class="c1"># to see if i got FE or GE avaliable</span>
+interface<span class="w"> </span>gigabitethernet<span class="w"> </span><span class="m">0</span>/0
+ip<span class="w"> </span>address<span class="w"> </span><span class="m">10</span>.0.0.1<span class="w"> </span><span class="m">255</span>.255.255.128
+shutdown<span class="w"> </span><span class="c1"># turn off</span>
+no<span class="w"> </span>shutdown<span class="w"> </span><span class="c1"># no in front of a command means to the oposite.</span>
+<span class="nb">exit</span>
+
+interface<span class="w"> </span>gigabitethernet<span class="w"> </span><span class="m">0</span>/1
+ip<span class="w"> </span>address<span class="w"> </span><span class="m">10</span>.0.0.129<span class="w"> </span><span class="m">255</span>.255.255.128
+no<span class="w"> </span>shutdown
+<span class="nb">exit</span>
+<span class="nb">exit</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="saving-config-so-we-dont-loose-everything">saving config so we don't loose everything</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>copy<span class="w"> </span>running-config<span class="w"> </span>startup-config
+</code></pre></div></td></tr></table></div>
+<h3 id="remove-the-config">remove the config</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>erase<span class="w"> </span>startup-config<span class="w"> </span><span class="c1">#erase the startup config</span>
+reload<span class="w"> </span><span class="c1"># reload the router so when it reboots and clears the ram so that there is nothing there.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="everything-over-just-shorter">everything over just shorter</h3>
+<p>the router has booted and i'm in user mode</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;command&gt;<span class="w"> </span>?<span class="w"> </span><span class="c1"># gives me help for that command</span>
+username<span class="w"> </span>skandix<span class="w"> </span>?<span class="w"> </span><span class="c1"># show me what i can write after the username, and how to set the password.</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>en
+conf<span class="w"> </span>term
+host<span class="w"> </span>alyssa_router
+banner<span class="w"> </span>motd<span class="w"> </span>c<span class="w"> </span>Authhorized<span class="w"> </span>Use<span class="w"> </span>Only!<span class="w"> </span>c
+line<span class="w"> </span>con<span class="w"> </span><span class="m">0</span>
+password<span class="w"> </span>cisco
+login
+live<span class="w"> </span>aux<span class="w"> </span><span class="m">0</span>
+password<span class="w"> </span>cisco
+login
+en<span class="w"> </span>sec<span class="w"> </span>cisco
+serv<span class="w"> </span>password-encryption
+ip<span class="w"> </span>domain-name<span class="w"> </span>alyssa_router
+username<span class="w"> </span>skandix<span class="w"> </span><span class="o">(</span>secret<span class="p">|</span>pasword<span class="o">)</span><span class="w"> </span>cisco<span class="w"> </span><span class="c1"># it differs from my hw and the lecturer one</span>
+crypto<span class="w"> </span>key<span class="w"> </span>generate<span class="w"> </span>rsa<span class="w"> </span>general-keys
+ip<span class="w"> </span>ssh<span class="w"> </span>version<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="c1"># enable ssh</span>
+line<span class="w"> </span>vty<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span>
+login<span class="w"> </span><span class="nb">local</span>
+transport<span class="w"> </span>input<span class="w"> </span>ssh
+interface<span class="w"> </span><span class="o">(</span>f<span class="p">|</span>g<span class="p">|</span>e<span class="o">)</span><span class="m">0</span>/0<span class="w"> </span><span class="c1"># varies on what interface you have, use show interfaces to see interfaces you have.</span>
+ip<span class="w"> </span>addr<span class="w"> </span><span class="m">10</span>.0.0.1<span class="w"> </span><span class="m">255</span>.255.255.128
+no<span class="w"> </span>shut
+interface<span class="w"> </span><span class="o">(</span>f<span class="p">|</span>g<span class="p">|</span>e<span class="o">)</span><span class="m">0</span>/1
+ip<span class="w"> </span>addr<span class="w"> </span><span class="m">10</span>.0.0.130<span class="w"> </span><span class="m">255</span>.255.255.128
+no<span class="w"> </span>shut
+<span class="nb">exit</span>
+line<span class="w"> </span>con<span class="w"> </span><span class="m">0</span>
+logging<span class="w"> </span>sync
+line<span class="w"> </span>aux<span class="w"> </span><span class="m">0</span>
+logging<span class="w"> </span>sync
+<span class="nb">exit</span>
+<span class="nb">exit</span>
+show<span class="w"> </span>run<span class="w"> </span><span class="c1"># lets look over the config</span>
+copy<span class="w"> </span>run<span class="w"> </span>start<span class="w"> </span><span class="c1"># save running to starting config</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="show-logging-messages-in-ssh">show logging messages in ssh</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>logging<span class="w"> </span>monitor
+</code></pre></div></td></tr></table></div>
+<h3 id="configuring-ipv6">configuring ipv6</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>ipv6<span class="w"> </span>unicast-routing<span class="w"> </span><span class="c1"># enable unicast-routing</span>
+interface<span class="w"> </span><span class="o">(</span>f<span class="p">|</span>g<span class="p">|</span>e<span class="o">)</span><span class="m">0</span>/0
+ipv6<span class="w"> </span>address<span class="w"> </span><span class="m">2001</span>:db8:4:a::1/64
+interface<span class="w"> </span><span class="o">(</span>f<span class="p">|</span>g<span class="p">|</span>e<span class="o">)</span><span class="m">0</span>/1
+ipv6<span class="w"> </span>address<span class="w"> </span><span class="m">2001</span>:db8:4:b::1/64
+<span class="nb">exit</span>
+copy<span class="w"> </span>run<span class="w"> </span>start
+</code></pre></div></td></tr></table></div>
+<h3 id="show-interfaces">show interfaces!!</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>show<span class="w"> </span>ip<span class="w"> </span>interface<span class="w"> </span>brief
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>

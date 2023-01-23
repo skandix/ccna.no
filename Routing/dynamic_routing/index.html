@@ -1,0 +1,1716 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../address_resolution_protocol/">
+      
+      
+        <link rel="next" href="../gateway/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Dynamic Routing - ccna.no</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynamic-routing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccna.no" class="md-header__button md-logo" aria-label="ccna.no" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ccna.no
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dynamic Routing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccna.no" class="md-nav__button md-logo" aria-label="ccna.no" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ccna.no
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        CCNA.no
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Homelab/" class="md-nav__link">
+        Homelab
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/" class="md-nav__link">
+        Basic Security Concepts for Cisco Networks
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          CCNA 200 301 Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CCNA 200 301 Topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CCNA 200 301 Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/1-network_fundamentals/" class="md-nav__link">
+        1.0 - Network Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/2-network_access/" class="md-nav__link">
+        2.0 - Network Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/3-ip_connectivity/" class="md-nav__link">
+        3.0 - IP Connectivity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/4-ip_services/" class="md-nav__link">
+        4.0 - IP Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/5-security_fundamentals/" class="md-nav__link">
+        5.0 - Security Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNA%20200-301%20Topics/6-automation_and_programmmability/" class="md-nav__link">
+        6.0 - Automation And Programmabiltiy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Devices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Devices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Devices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/boot/" class="md-nav__link">
+        Boot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/configuring_router/" class="md-nav__link">
+        Configuring Router
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/configuring_switch/" class="md-nav__link">
+        Configuring Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/ios/" class="md-nav__link">
+        Interconnecting Operating System
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Ethernet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ethernet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ethernet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/data_link_layer_tech/" class="md-nav__link">
+        Data Link Layer Technologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/intro_ethernet/" class="md-nav__link">
+        Intro Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ethernet/physical_layer_tech/" class="md-nav__link">
+        Physical Layer Technologies
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Misc/" class="md-nav__link">
+        Misc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Network_Fundamentals/" class="md-nav__link">
+        Network Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Resources/Useful_Resources/" class="md-nav__link">
+        Useful Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Routing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Routing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Routing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../address_resolution_protocol/" class="md-nav__link">
+        ARP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dynamic Routing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dynamic Routing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metric" class="md-nav__link">
+    Metric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing-protocol-categories" class="md-nav__link">
+    Routing Protocol Categories
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing Protocol Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exterior-gateway-protocols-egp" class="md-nav__link">
+    Exterior Gateway Protocols (EGP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior-gateway-protocols-igp" class="md-nav__link">
+    Interior Gateway Protocols (IGP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Interior Gateway Protocols (IGP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distance-vector-and-link-state" class="md-nav__link">
+    Distance Vector and link State
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-distance-ad-important" class="md-nav__link">
+    Administrative Distance (AD) [IMPORTANT]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric_1" class="md-nav__link">
+    Metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-rip-on-router" class="md-nav__link">
+    Configuring RIP on router
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-shortest-path-first-ospf" class="md-nav__link">
+    Open Shortest Path First (OSPF)
+  </a>
+  
+    <nav class="md-nav" aria-label="Open Shortest Path First (OSPF)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-example" class="md-nav__link">
+    Hello Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-id" class="md-nav__link">
+    Router ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbor-table" class="md-nav__link">
+    Neighbor Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-information" class="md-nav__link">
+    Link Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-routing-table" class="md-nav__link">
+    Calculate Routing Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf-terminology" class="md-nav__link">
+    OSPF Terminology
+  </a>
+  
+    <nav class="md-nav" aria-label="OSPF Terminology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messages-types" class="md-nav__link">
+    Messages Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf-neighbors" class="md-nav__link">
+    OSPF Neighbors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigrp" class="md-nav__link">
+    EIGRP
+  </a>
+  
+    <nav class="md-nav" aria-label="EIGRP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    Operation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        Default Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipv6_neighbor_discovery_protocol/" class="md-nav__link">
+        IPV6 Neighbor Discovery Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rouge_dhcp_server/" class="md-nav__link">
+        Rouge dhcp server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../static_routing/" class="md-nav__link">
+        Static Routing IPv4
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Securing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Securing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Securing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Securing/securing_swithces/" class="md-nav__link">
+        Securing the Switch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          VLAN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VLAN" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          VLAN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/intervlan_routing/" class="md-nav__link">
+        InterVLAN Routing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/layer3_switch/" class="md-nav__link">
+        Layer 3 Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/vlan/" class="md-nav__link">
+        VLAN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VLAN/vlan_trunk/" class="md-nav__link">
+        VLAN Trunk
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metric" class="md-nav__link">
+    Metric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing-protocol-categories" class="md-nav__link">
+    Routing Protocol Categories
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing Protocol Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exterior-gateway-protocols-egp" class="md-nav__link">
+    Exterior Gateway Protocols (EGP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior-gateway-protocols-igp" class="md-nav__link">
+    Interior Gateway Protocols (IGP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Interior Gateway Protocols (IGP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distance-vector-and-link-state" class="md-nav__link">
+    Distance Vector and link State
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-distance-ad-important" class="md-nav__link">
+    Administrative Distance (AD) [IMPORTANT]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric_1" class="md-nav__link">
+    Metric
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-rip-on-router" class="md-nav__link">
+    Configuring RIP on router
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-shortest-path-first-ospf" class="md-nav__link">
+    Open Shortest Path First (OSPF)
+  </a>
+  
+    <nav class="md-nav" aria-label="Open Shortest Path First (OSPF)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-example" class="md-nav__link">
+    Hello Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-id" class="md-nav__link">
+    Router ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbor-table" class="md-nav__link">
+    Neighbor Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-information" class="md-nav__link">
+    Link Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-routing-table" class="md-nav__link">
+    Calculate Routing Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf-terminology" class="md-nav__link">
+    OSPF Terminology
+  </a>
+  
+    <nav class="md-nav" aria-label="OSPF Terminology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messages-types" class="md-nav__link">
+    Messages Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf-neighbors" class="md-nav__link">
+    OSPF Neighbors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigrp" class="md-nav__link">
+    EIGRP
+  </a>
+  
+    <nav class="md-nav" aria-label="EIGRP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    Operation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dynamic-routing">Dynamic Routing</h1>
+<ul>
+<li>Static Routing<ul>
+<li>We have to set each route Manually.</li>
+<li>Meaning if one of the routes goes down, it requires manual intervention.</li>
+</ul>
+</li>
+<li>Dynamic Routing<ul>
+<li>Sends the routing table inbetween the routers.</li>
+</ul>
+</li>
+</ul>
+<h2 id="metric">Metric</h2>
+<blockquote>
+<p>A value that represents the cost of a path to a network prefix</p>
+</blockquote>
+<ul>
+<li>cost can be measured as<ul>
+<li>hop count</li>
+<li>bandwidth</li>
+</ul>
+</li>
+</ul>
+<h2 id="routing-protocol-categories">Routing Protocol Categories</h2>
+<p>Interior vs Exterior</p>
+<p>If company A signs a deal with ISP 1 and , company B with ISP 4.
+We need a mechanize for the ISP's to route traffic between each other (Exterior Gateway Protocol)</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    [Company A]
+           |--&gt; {ISP 1} &lt;--&gt; {ISP 1}
+                {ISP 3} &lt;--&gt; {ISP 4} &lt;--|
+                                 [Company B]
+</code></pre></div></td></tr></table></div>
+<h3 id="exterior-gateway-protocols-egp">Exterior Gateway Protocols (EGP)</h3>
+<ul>
+<li>Border Gateway Protocol (BPG)<ul>
+<li>is the Protocol the internet uses to transfer routes inbetween ISP's</li>
+<li>Path Vector Protocol<ul>
+<li>Setup a network with very specific paths.</li>
+<li>granular control how that protocol distrubutes traffic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ISP can route traffic to each other with the use of BGP</li>
+</ul>
+<h3 id="interior-gateway-protocols-igp">Interior Gateway Protocols (IGP)</h3>
+<ul>
+<li><strong>Distance Vector</strong><ul>
+<li>Periodic routing table exchanges<ul>
+<li>will tell the reciving routers how far away network is</li>
+</ul>
+</li>
+<li>Bellman-Ford</li>
+<li>Diffusion Update Algorithm</li>
+</ul>
+</li>
+<li><strong>Link State</strong><ul>
+<li>Exchanges link information with entire network</li>
+<li>Uses Shortest Path First algorithm (Djikstra Algorithm)</li>
+</ul>
+</li>
+</ul>
+<h4 id="distance-vector-and-link-state">Distance Vector and link State</h4>
+<table>
+<thead>
+<tr>
+<th>Distance Vector Protocols</th>
+<th>Link State Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Routing Information Protocol (RIP)</td>
+<td>Open Shorts Path First (OSPF)</td>
+</tr>
+<tr>
+<td>Interior Gateway Routing Protocol (IGRP)</td>
+<td>Intermediate System - Intermediate System (IS-IS)</td>
+</tr>
+<tr>
+<td>Enhanced Interior Gateway Routing Protocol (EIGRP)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>RIP</strong></p>
+<ul>
+<li>
+<p>V1</p>
+<ul>
+<li><strong>Classfull</strong> routing protocol</li>
+<li>It cannot pay attention to the subnet mask at all</li>
+</ul>
+</li>
+<li>
+<p>V2</p>
+<ul>
+<li><strong>Classless</strong> routing protocol</li>
+<li>It pays attention to the subnet mask!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>IGRP</strong></p>
+<ul>
+<li>Classfull</li>
+<li>Cisco Properitary Protocol</li>
+<li>Very Slow, Just like rip</li>
+</ul>
+</li>
+<li>
+<p><strong>EIGRP</strong></p>
+<ul>
+<li>Sophisticated Distance Vector Routing Protocol</li>
+</ul>
+</li>
+</ul>
+<h3 id="administrative-distance-ad-important">Administrative Distance (AD) <strong>[IMPORTANT]</strong></h3>
+<blockquote>
+<p>For the router to choose which route to the dest network gets added to the table for the protocol</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>AD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directly Connected</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Static Route</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EIGRP</td>
+<td>90</td>
+</tr>
+<tr>
+<td>OSPF</td>
+<td>110</td>
+</tr>
+<tr>
+<td>IS-IS</td>
+<td>115</td>
+</tr>
+<tr>
+<td>RIP</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metric_1">Metric</h3>
+<blockquote></blockquote>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directyl connected</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Static Route</td>
+<td>--</td>
+</tr>
+<tr>
+<td>EIGRP</td>
+<td>Bandwidth + Delay</td>
+</tr>
+<tr>
+<td>OSPF</td>
+<td>Bandwidth</td>
+</tr>
+<tr>
+<td>IS-IS</td>
+<td>Varies (Custom)</td>
+</tr>
+<tr>
+<td>RIP</td>
+<td>Hop Count</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuring-rip-on-router">Configuring RIP on router</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>en
+conf t
+router rip
+ver 2 # as ver1 does not support cidr.
+no auto-summary # utillity in rip, to sumarize a large grp of hosts to a route into one statement
+network 10.10.0.0
+network 192.168.0.0
+do sho run | b router rip
+exit
+exit
+
+show ip protocols # show configured routing protocols
+</code></pre></div></td></tr></table></div>
+<h2 id="open-shortest-path-first-ospf">Open Shortest Path First (OSPF)</h2>
+<ul>
+<li>OSPF</li>
+<li>uses hello protocol to discover its neighbor.<ul>
+<li>Send out periodic hello messages</li>
+<li>Hello Protocol Shares</li>
+<li>Subnet/mask</li>
+<li>Hello Interval</li>
+<li>Dead Interval</li>
+<li>Area ID (By default there must be exists an Area 0!)</li>
+<li>Authentication(opt)</li>
+<li>Stub Area Flag</li>
+<li>MTU size</li>
+<li>To build a neighbor relationship both neighbor needs to be in the same area</li>
+</ul>
+</li>
+</ul>
+<h3 id="hello-example">Hello Example</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subnet/ Mask</td>
+<td>172.16.0.0/30</td>
+</tr>
+<tr>
+<td>Hello Interval</td>
+<td>10 sec / 30 sec</td>
+</tr>
+<tr>
+<td>Dead Interval</td>
+<td>4x Hello Interval</td>
+</tr>
+<tr>
+<td>Area ID</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Authetication (opt)</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Stub Area Flag</td>
+<td>none</td>
+</tr>
+<tr>
+<td>MTU Size</td>
+<td>Varies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="router-id">Router ID</h3>
+<blockquote>
+<p>an Unique identification to identify routers in ospf
+- it choose on boot or if rebooted
+- What can be used as the Router ID?
+    1. Configured Value
+    2. Highest IP on loopback interface
+    3. Highest IP on ANY active interface
+- Router ID is written in the format as an ipv4 address BUT ITS not an ipv4 addr.</p>
+</blockquote>
+<h3 id="neighbor-table">Neighbor Table</h3>
+<blockquote>
+<p>This is needed to build a relationshops</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neighbor ID</td>
+<td>192.168.10.1</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Init</td>
+</tr>
+<tr>
+<td>Dead Time</td>
+<td>40sec</td>
+</tr>
+<tr>
+<td>Next Hop Address</td>
+<td>172.16.0.2</td>
+</tr>
+<tr>
+<td>Exit Interface</td>
+<td>F0/1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="link-information">Link Information</h3>
+<ul>
+<li>Link State Advertisement (LSA)</li>
+<li>Link State Update (LSU)</li>
+<li>Link State Database (LSDb)</li>
+<li>Router ID</li>
+<li>Link ID</li>
+<li>Link Mask</li>
+<li>LSA Type</li>
+</ul>
+<h3 id="calculate-routing-table">Calculate Routing Table</h3>
+<ul>
+<li>Takes each routers LSDb</li>
+<li>Uses SPF Algorihm (Djikstra Alorithm)</li>
+</ul>
+<h3 id="ospf-terminology">OSPF Terminology</h3>
+<h4 id="messages-types">Messages Types</h4>
+<ul>
+<li>Hello</li>
+<li>Database Descriptor</li>
+<li>Link State Request <strong>(LSA)</strong></li>
+<li>If a Routes is missing some data it will send out a request to other routers about it's missing data, and then they will report back with a <strong>LSU</strong></li>
+<li>Link State Update <strong>(LSU)</strong></li>
+<li>Contains Link State Advertisement <strong>(LSA)</strong></li>
+<li>Link State Acknowledgement <strong>(LSAck)</strong></li>
+<li>
+<p>Acking that we recived data from OSPF</p>
+</li>
+<li>
+<p>LSA Types</p>
+</li>
+<li>Type 1 - <strong>Router LSA</strong><ul>
+<li>Describes links and costs</li>
+</ul>
+</li>
+<li>Type 2 - <strong>Network LSA</strong><ul>
+<li>Describes routers in a Broadcast Network</li>
+</ul>
+</li>
+<li>Type 3 - <strong>Summary LSA</strong></li>
+</ul>
+<h3 id="ospf-neighbors">OSPF Neighbors</h3>
+<ul>
+<li>Downside</li>
+<li>is that you have multiple routers with osfp, it will flood itself with neighbo requests..</li>
+<li>Designated Router (DR)</li>
+<li>Main router!</li>
+<li>Backup Designated Router (BDR)</li>
+<li>It's the backup of the DR</li>
+<li>DR-Other</li>
+<li>is not a backup</li>
+<li>is not a DR</li>
+<li>it's the....other one.</li>
+</ul>
+<h2 id="eigrp">EIGRP</h2>
+<blockquote>
+<p>Enhanced Interior Gateway Routing Protocol
+- Distance Vector Protocol
+  - Exchanges routing tables info
+    - in order to populate a topology table
+- Fast Convergence
+  - 3 tables
+    - Neighbor Table
+    - Topology Table
+    - Routing Table
+      - Diffusion Update Algorithm (DUAL) (Same as SPF in OSPF aka Djikstra)
+        - Successor route
+          - Best Cost
+          - Added to routing table
+        - Feasible successor
+          - Second best cost
+          - Immediately added upon loss of successor route.
+- Composite Metric
+  - Configured Values
+    - Bandwidth
+    - Delay
+  - Calculated Values
+    - Load
+    - Reliability</p>
+</blockquote>
+<h3 id="operation">Operation</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="o">{</span>...<span class="o">}</span><span class="w"> </span>---<span class="w"> </span><span class="o">[</span>Router<span class="w"> </span>A<span class="o">]</span><span class="w"> </span>------<span class="w"> </span><span class="o">[</span>Router<span class="w"> </span>B<span class="o">]</span><span class="w"> </span>---<span class="w"> </span><span class="o">{</span>...<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+- Hello Message
+  - Send message From A to B and vice versa
+  - It will then build the Routing table
+    - Update Messages
+      - Use RTP, with update messages, to populate the topology table, and use DUAL to calculate it
+        - Acknowledgement
+          - ....mye !</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>
